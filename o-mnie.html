@@ -1,29 +1,251 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<title>strona</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Marka Wilczyńskiego - ucznia technikum programistycznego">
+    <title>Marek Wilczyński | Portfolio</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #e5e7eb;
+    background-color: #111827;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #e0e7ff;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    background-color: #1f2937;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.section p {
+    color: #d1d5db;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.skills li {
+    background-color: #2563eb;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.equipment {
+    list-style: none;
+}
+
+.equipment li {
+    padding: 8px 0;
+    border-bottom: 1px solid #374151;
+}
+
+.equipment li:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    border-left: 5px solid #7c3aed;
+}
+
+blockquote {
+    font-size: 21px;
+    font-style: italic;
+    color: #c4b5fd;
+    padding: 10px 20px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #0f172a;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    color: #9ca3af;
+}
+    </style>
 </head>
+
 <body>
-Marek Wilczyński
-uczeń drugiej klasy technikum, technik programista
-O mnie
-Programować zacząłem dwa lata temu od modów do Minecrafta i do dziś najbardziej lubię ten moment, w którym coś zaczyna działać po godzinie szukania literówki. Poza tym gram w kosza i naprawiam stare laptopy.
-Czego się uczę
-PHP
-CSS
-git
-Linux
-Sprzęt
-laptop: Lenovo ThinkPad T480
-system: Fedora
-edytor: VS Code
-Cytat, który mi się podoba
-Program to opis, tylko napisany w sztucznym języku.
-Kontakt
-marek.wilczynski@example.com
-https://github.com/example
-zdjecie.jpg
+
+    <header class="header">
+        <div class="container">
+            <h1>Marek Wilczyński</h1>
+            <p>Uczeń drugiej klasy technikum, technik programista</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="o-mnie" class="section">
+            <h2>O mnie</h2>
+            <p>
+                Programować zacząłem dwa lata temu od modów do Minecrafta
+                i do dziś najbardziej lubię ten moment, w którym coś zaczyna
+                działać po godzinie szukania literówki. Poza tym gram w kosza
+                i naprawiam stare laptopy.
+            </p>
+        </section>
+
+        <section id="nauka" class="section">
+            <h2>Czego się uczę</h2>
+
+            <ul class="skills">
+                <li>PHP</li>
+                <li>CSS</li>
+                <li>Git</li>
+                <li>Linux</li>
+            </ul>
+        </section>
+
+        <section id="sprzet" class="section">
+            <h2>Sprzęt</h2>
+
+            <ul class="equipment">
+                <li><strong>Laptop:</strong> Lenovo ThinkPad T480</li>
+                <li><strong>System:</strong> Fedora</li>
+                <li><strong>Edytor:</strong> VS Code</li>
+            </ul>
+        </section>
+
+        <section id="cytat" class="section quote-section">
+            <h2>Cytat, który mi się podoba</h2>
+
+            <blockquote>
+                „Program to opis, tylko napisany w sztucznym języku.”
+            </blockquote>
+        </section>
+
+        <section id="kontakt" class="section">
+            <h2>Kontakt</h2>
+
+            <address>
+                <p>
+                    <strong>E-mail:</strong>
+                    <a href="mailto:marek.wilczynski@example.com">
+                        marek.wilczynski@example.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/example" target="_blank" rel="noopener noreferrer">
+                        github.com/example
+                    </a>
+                </p>
+            </address>
+        </section>
+
+        <section id="zdjecie" class="section">
+            <h2>Zdjęcie</h2>
+
+            <img
+                src="zdjecie.jpg"
+                alt="Zdjęcie Marka Wilczyńskiego"
+                class="profile-image"
+            >
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Marek Wilczyński</p>
+        </div>
+    </footer>
+
 </body>
 </html>
-
